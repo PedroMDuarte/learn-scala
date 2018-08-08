@@ -60,9 +60,10 @@ object CalculatorUI {
       try {
         text().toDouble
       } catch {
-        case e: NumberFormatException =>
+        case e: NumberFormatException => {
           parent.className += " has-error"
           Double.NaN
+        }
       }
     }
   }
